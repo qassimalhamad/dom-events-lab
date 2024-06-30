@@ -1,9 +1,7 @@
-
 /*-------------------------------- Constants --------------------------------*/
 const display = document.querySelector(".display");
 let buttons = document.querySelectorAll(".button");
 /*-------------------------------- Variables --------------------------------*/
-
 /*------------------------ Cached Element References ------------------------*/
 /*----------------------------- Event Listeners -----------------------------*/
 /*-------------------------------- Functions --------------------------------*/
@@ -16,11 +14,12 @@ buttons.forEach((button) => {
         display.textContent += number;
       }
     }
+    if (number == "C") {
+        display.textContent = "";
+      }
     if (number == "=" && number !== "C") {
       display.textContent = eval(display.textContent);
     }
-    if (number == "C") {
-      display.textContent = "";
-    }
+
   });
 });
