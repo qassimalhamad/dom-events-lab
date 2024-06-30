@@ -9,7 +9,7 @@ buttons.forEach((button) => {
   button.addEventListener("click", (event) => {
     let number = event.target.textContent;
     if (number !== "=" && number !== "C") {
-      if (display.textContent === "" && display.textContent === true) {
+      if (display.textContent == "" && display.textContent === true) {
       } else {
         display.textContent += number;
       }
@@ -17,7 +17,7 @@ buttons.forEach((button) => {
     if (number == "C") {
         display.textContent = "";
       }
-    if (number == "=" && number !== "C") {
+    if (number === "=" && number !== "C") {
       display.textContent = eval(display.textContent);
     }
 
